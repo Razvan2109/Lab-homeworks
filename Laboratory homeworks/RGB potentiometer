@@ -1,0 +1,34 @@
+int rPin=11;
+int gPin=10;
+int bPin=9;
+int rIn=0;
+int gIn=1;
+int bIn=2;
+int rVal;
+int gVal;
+int bVal;
+
+
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+pinMode(rPin,OUTPUT);
+pinMode(gPin,OUTPUT);
+pinMode(bPin,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+rVal=analogRead(rIn);
+gVal=analogRead(gIn);
+bVal=analogRead(bIn);
+rVal=map(rVal,0,1023,0,255);
+gVal=map(gVal,0,1023,0,255);
+bVal=map(bVal,0,1023,0,255);
+analogWrite(rPin,rVal);
+analogWrite(gPin,gVal);
+analogWrite(bPin,bVal);
+Serial.println(rVal);
+Serial.println(gVal);
+Serial.println(bVal);
+}
