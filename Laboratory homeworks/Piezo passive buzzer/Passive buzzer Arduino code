@@ -1,0 +1,42 @@
+const int passivePin = A0;
+const int activePin = 9;
+const int buttonPin = 2;
+
+int buzzerTone = 500;
+
+int passiveValue = 0;
+int treshold = 50;
+int buttonValue = 0;
+
+unsigned long currentTime = 0;
+bool isTriggered = false;
+int interval = 5000;
+
+void setup() {
+  // put your setup code here, to run once:
+  
+  pinMode(buttonPin, INPUT);
+  pinMode(activePin,OUTPUT);
+  pinMode(passivePin,INPUT);
+  Serial.begin(9600);
+  //tone(activePin, buzzerTone, 1000); This was to test if the active buzzer works.
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  passiveValue = analogRead(passivePin);
+  if(passiveValue > treshold){
+    isTriggered = true;
+  }
+  if(isTriggered == true){
+    if(millis() > currentTime + interval){
+      currentTime = millis();
+      tone(activePin, buzzerTone, 1000);
+    }
+    buttonValue = digitalRead(buttonPin);
+    if(buttonValue == HIGH){
+      isTriggered = false;
+      noTone(activePin);
+    }
+  }
+}
