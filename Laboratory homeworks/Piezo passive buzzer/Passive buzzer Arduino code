@@ -34,7 +34,7 @@ void loop() {
       tone(activePin, buzzerTone, 1000);
     }
     buttonValue = digitalRead(buttonPin);
-    if(buttonValue == HIGH){
+    if(buttonValue == LOW){
       isTriggered = false;
       noTone(activePin);
     }
