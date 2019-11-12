@@ -1,0 +1,3 @@
+The code for the piezo passive buzzer experiment.
+The passive buzzer detects the "knocks"(which are vibrations) to turn on the active buzzer and make noise.
+The active buzzer can be turned off with a push button.
