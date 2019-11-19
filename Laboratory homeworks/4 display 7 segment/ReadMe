@@ -1,0 +1,5 @@
+This is the code for the 4 display 7 segment controlled by a joystick.
+You can select the display number using the xAxis and the switch button (the current display is indicated by the lit decimalpoint).
+Doing this will enter the lockedOn mode.
+While in lockedOn mode (flashing decimalpoint)you can increase/decrease the number shown on the display using the yAxis.
+Hitting the switch again will save the number on the display and re-enter the cycling mode.
