@@ -1,0 +1,28 @@
+Ultimate Champion
+
+Short description:
+
+You are the last warrior and the leader of your tribe, and it is your fate that chose you to save your people from eternal doom. 
+Face all your enemies in the arena and proove yourself worthy of the Magic Orb of Life. 
+
+Hardware:
+
+-8X8 led matrix (displaying the "Arena")
+-LCD (to track the score and to indicate the level and remaining lives)
+-joystick and buttons (to control your character)
+-max7219 driver
+
+
+
+Features:
+
+-Gear that gives you abilities such as power attacks and quick dashes.
+-Multiple types of enemies with unique strategies and abilities.
+-Mini-bosses and a final boss.
+-Ranking system
+
+How to play:
+
+After you choose to play the game, you will be placed in the arena. There will be waves of enemies that will try to kill you.
+Your goal is to succesfully defeat all your opponents and get past the final boss. It will not be easy, as the difficulty will increase as you progress.
+You use the joystick to move and the button to perform a basic attack. To use your special ability you will have a different button.
